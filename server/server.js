@@ -11,13 +11,11 @@ const dbAuth = require("../dbAuth");
 
 const app = express();
 
-// Replace with your mongoLab URI
 const MONGO_URI = `mongodb+srv://${dbAuth.dbUsername}:${dbAuth.dbPass}@cluster0-ikg3e.mongodb.net/test?retryWrites=true&w=majority`;
 if (!MONGO_URI) {
   throw new Error("You must provide a MongoLab URI");
 }
 
-// Colorful connection message
 const connectMsg = () => {
   return console.log(
     chalk.green(
@@ -33,7 +31,6 @@ const connectMsg = () => {
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_URI, { useNewUrlParser: true });
 mongoose.connection
-  // .once("open", () => console.log("Connected to MongoLab instance."))
   .once("open", () => connectMsg())
   .on("error", error => console.log("Error connecting to MongoLab:", error));
 
