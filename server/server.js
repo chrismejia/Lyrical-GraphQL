@@ -20,7 +20,7 @@ const connectMsg = () => {
   return console.log(
     chalk.green(
       figlet.textSync("Connected to MongoDB!", {
-        font: "Slant",
+        font: "Small Slant",
         horizontalLayout: "default",
         verticalLayout: "default"
       })
