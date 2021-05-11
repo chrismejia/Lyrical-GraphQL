@@ -30,7 +30,7 @@
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "html-webpack-plugin": "^2.26.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "mongoose": "^5.8.11",
     "nodemon": "*",
     "passport": "^0.3.2",
